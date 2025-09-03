@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class X - Delhi Public School</title>
+</head>
+<body>
+
+
+    <!-- A jinja comment down below! -->
+    {# This is a comment #}
+    {% for key in marks.keys() %}
+      {{key}}
+     
+    {% endfor %}
+    <br>
+    {% for value in marks.values() %}
+        {{value}}
+         {% if value>80 %}
+        {{ "Good S tudent" }}
+      {% endif %}
+    {% endfor %}
+    <br>
+    {% for keyvaluepair in marks.items() %}
+        {{keyvaluepair}}
+    {% endfor %}
+
+<ul>
+
+  <li>The marks of John: {{marks['John']}}</li>
+  <li>The marks of Saurav: {{marks['Saurav']}}</li>
+  <li>The marks of Mark: {{marks['Mark']}}</li>
+  <li>The marks of Jeff: 65</li>
+  <li>The marks of Alexa: 90</li>
+  <li>The marks of Lilly: 100</li>
+  
+</ul>
+
+</body>
+</html>
