@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content%}
+    <h1>Welcome to My Flask App</h1>
+    <img src="{{ url_for('static', filename = 'logo.png')}}" alt="logo" width="150">
+    <p>Here is our list of users:</p>
+    <ul>
+      {% for user in users %}
+        <li>{{user}}</li>
+      {% endfor %}
+    </ul>
+    {% if users|length > 0 %}
+      <p>We have users!</p>
+      {% else %}
+  <p>No users yet.</p>
+    {% endif %}
+{% endblock %}
